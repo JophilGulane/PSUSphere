@@ -38,16 +38,14 @@
                 <tr>
                   <th scope="col">Program Name</th>
                   <th scope="col">College</th>
-                  <th scope="col">Description</th>
                   <th scope="col">Action</th>
                 </tr>
               </thead>
               <tbody>
-                {% for object in program_list %}
+                {% for object in object_list %}
                 <tr>
-                  <td>{{ object.name }}</td>
-                  <td>{{ object.college.name }}</td>
-                  <td>{{ object.description }}</td>
+                  <td>{{ object.prog_name }}</td>
+                  <td>{{ object.college }}</td>
                   <td>
                       <a href="programs_list/{{ object.id }}">Edit</a>
                       <a href="programs_list/{{ object.id }}/delete" class="text-danger">Delete</a>

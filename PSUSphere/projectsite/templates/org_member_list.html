@@ -37,18 +37,16 @@
             <table class="table table-striped mt-3">
               <thead>
                 <tr>
-                  <th scope="col">Name</th>
-                  <th scope="col">College</th>
-                  <th scope="col">Description</th>
+                  <th scope="col">Student</th>
+                  <th scope="col">Organization</th>
                   <th scope="col">Action</th>
                 </tr>
               </thead>
               <tbody>
                 {% for object in object_list %}
                 <tr>
-                  <td>{{ object.name }}</td>
-                  <td>{{ object.college }}</td>
-                  <td>{{ object.description }}</td>
+                  <td>{{ object.student }}</td>
+                  <td>{{ object.organization }}</td>
                   <td>
                       <a href="org_members_list/{{ object.id }}">Edit</a>
                       <a href="org_members_list/{{ object.id }}/delete" class="text-danger">Delete</a>

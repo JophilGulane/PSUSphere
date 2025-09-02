@@ -16,7 +16,6 @@ class College(BaseModel):
         return self.college_name
 
 
-# rev date: 2025-August rev 01 4
 class Program(BaseModel):
     prog_name = models.CharField(max_length=150)
     college = models.ForeignKey(College, on_delete=models.CASCADE)
