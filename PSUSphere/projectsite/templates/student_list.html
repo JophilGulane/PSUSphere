@@ -1,4 +1,7 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
 <div class="content">
   <div class="container-fluid">
     <h4 class="page-title">Home</h4>
@@ -6,7 +9,7 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-header">
-            <div class="card-title">List of Organizations</div>
+            <div class="card-title">List of Students</div>
             <div class="card-category">Page Subtitle</div>
           </div>
           <br />
@@ -25,7 +28,7 @@
               </div>
               <div class="col-md-6">
                   <div class="pull-right">
-                      <a href="{% url 'organization-add' %}" class="btn btn-success btn-rounded">Add Organization</a>
+                      <a href="{% url 'student-add' %}" class="btn btn-success btn-rounded">Add Student</a>
                   </div>
               </div>
           </div>
@@ -46,12 +49,10 @@
                   <td>{{ object.name }}</td>
                   <td>{{ object.college }}</td>
                   <td>{{ object.description }}</td>
-                </tr>
-                <td>
-                    <a href="organization_list/{{ object.id }}">Edit</a>
-                    <a href="organization_list/{{ object.id }}/delete" class="text-danger">Delete</a>
-                </td>
-
+                  <td>
+                      <a href="students_list/{{ object.id }}">Edit</a>
+                      <a href="students_list/{{ object.id }}/delete" class="text-danger">Delete</a>
+                  </td>
                 </tr>
                 {% empty %}
                 <tr>
@@ -59,7 +60,6 @@
                         <p class="text-sm font-weight-bold mb-0">No Records Found</p>
                     </td>
                 </tr>
-
                 {% endfor %}
               </tbody>
             </table>
