@@ -35,7 +35,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Ggula\Downloads\School PDFs\3rd Year 1st Semester\App Dev and Emerging Technologies\PSUSphere\psusenv"
+VIRTUAL_ENV="C:\Users\Ggula\Desktop\PSUSphere\psusenv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
