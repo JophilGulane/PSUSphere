@@ -8,15 +8,16 @@ from studentorg.forms import OrganizationForm, OrgMemberForm, StudentForm, Progr
 from django.urls import reverse_lazy
 from django.db.models import Q
 from django.utils import timezone
-
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import TemplateView
 
 
     
 # Organization
-class HomePageView(ListView):
-    model = Organization
-    context_object_name = 'home'
+class HomePageView(LoginRequiredMixin, TemplateView):
     template_name = "home.html"
+    login_url = "account_login"  # name of your signin URL
+    redirect_field_name = "next"  # optional
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
